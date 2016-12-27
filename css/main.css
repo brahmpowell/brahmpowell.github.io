@@ -366,14 +366,23 @@ h1.navbar-brand {
 .slide-caption .caption-content {
     vertical-align: middle;
     display: table-cell;
+    /*display: inline-block;*/
+    display: inline-grid;
+    width: max-content;
 }
 
 .caption-content h2 {
     color: #fff;
     font-size: 52px;
-    font-weight: 400;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 25px;
     text-transform: uppercase;
+    /*background-color: #ececec;*/
+    /*background:rgba(255,255,255,0.7);*/
+    /*text-shadow: 1px 1px 1px #000;*/
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
 .caption-content > span {
@@ -543,8 +552,8 @@ h1.navbar-brand {
 }
 
 #about .message-body {
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 1.5;
     margin-bottom: 70px;
 }
 
@@ -580,18 +589,32 @@ h1.navbar-brand {
 	Services
 ==================================================================*/
 
+#service {
+    background-image: url(../img/parallax/testimonial.jpg);
+    color: #fff;
+}
+
+#service .container {
+    background-color: rgba(15,155,224, 0.78);
+    padding: 50px;
+}
+
+#service h2 {
+    color: #fff;
+}
+
+#service .sec-title h2:after {
+    border-bottom: 1px solid #fff;
+}
+
+/*////////////////////////////////////////////////////////*/
+
 .service-icon {
     border: 3px solid transparent;
     display: inline-block;
     height: 85px;
     width: 85px;
     line-height: 101px;
-
-    -webkit-transform: rotate(47deg);
-       -moz-transform: rotate(47deg);
-        -ms-transform: rotate(47deg);
-         -o-transform: rotate(47deg);
-            transform: rotate(47deg);
 
     -webkit-transition: all 0.3s ease 0s;
        -moz-transition: all 0.3s ease 0s;
@@ -600,23 +623,16 @@ h1.navbar-brand {
             transition: all 0.3s ease 0s;
 }
 
-.service-item:hover .service-icon {
-    border: 3px solid #009ee3;
+.service-item:hover .service-icon img{
+           border: 3px solid #009ee3;
     margin-bottom: 20px;
-    color: #009ee3;
-}
-
-.service-icon i {
-    -webkit-transform: rotate(-48deg);
-       -moz-transform: rotate(-48deg);
-        -ms-transform: rotate(-48deg);
-         -o-transform: rotate(-48deg);
-            transform: rotate(-48deg);
+            color: #009ee3;
 }
 
 .service-item h3 {
     font-size: 20px;
     text-transform: uppercase;
+    color: #ffffff;
 }
 
 /*=================================================================
@@ -640,6 +656,10 @@ h1.navbar-brand {
     overflow: hidden;
     position: relative;
     width: 32%;
+}
+
+.portfolio-item img{
+    display: inline-block;
 }
 
 figcaption.mask {
@@ -870,22 +890,22 @@ textarea.form-control {
 
 
 /*============================================================
-	Google Maps
-==============================================================*/
-
-#google-map {
-    padding: 0;
-}
-
-#map-canvas {
-    width: 100%;
-    height: 300px;
-}
-
-
-/*============================================================
 	Footer
 ==============================================================*/
+
+#footer {
+    background-color: #009EE3;
+    height: auto;
+}
+
+.footer-text {
+    vertical-align: middle;
+    color: #000000;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    display: inline-block;
+}
 
 /*============================================================ 
 	Responsive Styles
@@ -982,7 +1002,7 @@ textarea.form-control {
     }
 
     .parallax {
-        background-position: centet tip !important;
+        background-position: center tip !important;
     }
 
     .sec-title h2 {

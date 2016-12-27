@@ -1045,6 +1045,7 @@ Copyright (c) 2013 Daniel Eden
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
+  /*background-color: Transparent;*/
 }
 
 @-webkit-keyframes fadeInDownBig {
